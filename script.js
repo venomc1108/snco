@@ -4,7 +4,7 @@
   /* =========================================================
      ⚙️ CẤU HÌNH — SỬA TẠI ĐÂY
      ========================================================= */
-  const PASSWORD    = "123456";
+  const PASSWORD    = "01101988";
   const MUSIC       = "assets/music.mp3";
   const SENDER_NAME = "venom";
 
