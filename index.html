@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1a0a20">
+<title>🎂 Chúc Mừng Sinh Nhật Cô Giáo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND LAYERS - CYBER NIGHT -->
+<div class="bg-gradient"></div>
+<div class="bg-vignette"></div>
+<div class="bg-nebula nebula-1"></div>
+<div class="bg-nebula nebula-2"></div>
+<div class="bg-nebula nebula-3"></div>
+<canvas id="starCanvas"></canvas>
+<div class="bg-bokeh" id="bgBokeh"></div>
+<canvas id="particlesCanvas"></canvas>
+<div class="bg-petals" id="bgPetals"></div>
+
+<!-- MUSIC BUTTON -->
+<button class="music-btn" id="musicBtn" aria-label="Bật tắt nhạc">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+</button>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============ SCREEN 1: CAKE ============ -->
+<section class="screen screen-cake active" id="screenCake">
+  <div class="cake-hint-top">🎂 Một món quà nhỏ dành tặng cô...</div>
+
+  <div class="cake-wrap" id="cakeWrap">
+    <div class="cake-glow"></div>
+
+    <div class="cake">
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="flame-glow"></div>
+      </div>
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="flame-glow"></div>
+      </div>
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="flame-glow"></div>
+      </div>
+
+      <div class="tier tier-top">
+        <div class="icing"></div>
+        <div class="dot-row">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="tier tier-mid">
+        <div class="icing"></div>
+        <div class="dot-row">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span>
+        </div>
+      </div>
+      <div class="tier tier-bottom">
+        <div class="icing"></div>
+        <div class="dot-row">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="cake-plate"></div>
+    </div>
+  </div>
+
+  <div class="cake-hint-bottom">Chạm vào chiếc bánh để mở nhé ❤️</div>
+</section>
+
+<!-- ============ SCREEN 2: PASSWORD ============ -->
+<section class="screen screen-password" id="screenPassword">
+  <div class="password-card" id="passwordCard">
+    <div class="password-deco"></div>
+    <h2 class="password-title">🔐 Một chút bí mật...</h2>
+    <p class="password-sub">Nhập mật khẩu để mở món quà này nhé.</p>
+
+    <div class="password-input-wrap">
+      <input type="password" id="passwordInput" class="password-input" placeholder="Nhập mật khẩu..." autocomplete="off">
+    </div>
+
+    <button class="password-btn" id="passwordBtn">
+      <span>Mở lời chúc ❤️</span>
+    </button>
+
+    <div class="password-error" id="passwordError">Oops... hình như chưa đúng rồi 😄</div>
+  </div>
+</section>
+
+<!-- ============ SCREEN 3: LETTER ============ -->
+<section class="screen screen-letter" id="screenLetter">
+  <div class="letter-wrap">
+    <div class="letter" id="letter">
+      <div class="letter-deco letter-deco-tl">🌸</div>
+      <div class="letter-deco letter-deco-br">🌷</div>
+
+      <div class="letter-header">
+        <div class="letter-ornament">✦ ❦ ✦</div>
+        <h1 class="letter-greeting">💐 Gửi cô giáo kính mến</h1>
+        <p class="letter-subgreeting">Nhân ngày sinh nhật của cô...</p>
+        <div class="letter-divider"></div>
+      </div>
+
+      <div class="letter-body" id="letterBody"></div>
+
+      <div class="letter-signature" id="letterSignature">
+        <p class="letter-closing" id="letterClosing"></p>
+        <p class="letter-heart" id="letterHeart">Thương gửi cô ❤️</p>
+        <p class="letter-name" id="letterName"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL MESSAGE -->
+<div class="final-message" id="finalMessage">
+  <span>Chúc cô một sinh nhật thật hạnh phúc! 🎂💐</span>
+</div>
+
+<!-- CONFETTI LAYER -->
+<div class="confetti-layer" id="confettiLayer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
